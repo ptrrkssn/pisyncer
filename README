@@ -4,3 +4,6 @@ Web frontend to isync (mbsync)
 Copyright (c) 2016 Peter Eriksson <pen@lysator.liu.se>
 
 A simple CGI binary that makes it easier for users to initiate an IMAP sync between two mail servers.
+
+Needs a lot of work - do not use as is, probably contains bugs and is very specific for the current
+environment at IFM / LiU.
