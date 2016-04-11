@@ -1,0 +1,42 @@
+# mbsync.testson
+
+Expunge None
+Create Slave
+
+IMAPStore gorfr@ifm
+Host mail.ifm.liu.se
+SSLType STARTTLS
+SSLVersions TLSv1.2
+AuthMechs LOGIN
+User gorfr
+Pass testtesttest
+
+IMAPStore testson@ifm
+Host mail.ifm.liu.se
+SSLType STARTTLS
+SSLVersions TLSv1.2
+AuthMechs LOGIN
+User testson
+Pass 9test9abc
+
+IMAPStore peter86@liu
+Host mail.liu.se
+SSLType STARTTLS
+SSLVersions TLSv1
+AuthMechs LOGIN
+User peter86
+# Pass xxx
+
+# Channel gorfr@ifm2testson@ifm
+# Master :gorfr@ifm:
+# Slave :testson@ifm:GORFR/
+# Patterns * !Trash
+# Expunge None
+# Sync Pull
+
+Channel testson@ifm2peter86@liu
+Master :testson@ifm:
+Slave :peter86@liu:TESTSON/
+Patterns * !Trash
+Expunge None
+Sync Pull

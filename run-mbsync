@@ -1,0 +1,20 @@
+#!/bin/ksh
+
+IFMUSER="$1"
+case "$IFMUSER" in
+     */*)
+         exit 1
+	 ;;
+esac
+
+PATH=/ifm/bin:/usr/bin
+HOME="/var/msync/$IFMUSER"
+
+export HOME PATH
+
+cd "$HOME" || exit 1
+/ifm/bin/mbsync -c "$HOME/config" -a -V | mailx -s "IFM2LiU Mail Sync Output" "$IFMUSER@ifm.liu.se"
+cd /var/msync && rm -fr "$IFMUSER"
+
+exit 0
+
