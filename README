@@ -1,0 +1,6 @@
+# pisyncer
+Web frontend to isync (mbsync)
+
+Copyright (c) 2016 Peter Eriksson <pen@lysator.liu.se>
+
+A simple CGI binary that makes it easier for users to initiate an IMAP sync between two mail servers.
